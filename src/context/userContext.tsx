@@ -41,8 +41,8 @@ export const UserContext = createContext<{ user: userType; dispatch: Dispatch<Ac
 export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [user, dispatch] = useReducer(userReducer, initialState);
     return (
-        <UserContext.Provider value={{ user, dispatch }}>
+        <UserContext value={{ user, dispatch }}>
             {children}
-        </UserContext.Provider>
+        </UserContext>
     );
 };
